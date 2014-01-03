@@ -1,0 +1,17 @@
+{
+  "name": "brainstation_wls",
+  "version": "0.0.1",
+  "homepage": "https://github.com/BrainStation/wls",
+  "authors": [
+    "MikeBecker <mike@brainstation.de>"
+  ],
+  "description": "A lib of general SCSS styles to start a webproject",
+  "main": "scss/app.scss",
+  "keywords": [
+    "Sass",
+    "layout",
+    "lib"
+  ],
+  "license": "MIT",
+  "private": true
+}
