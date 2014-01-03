@@ -1,0 +1,58 @@
+@mixin fe-field {
+  padding: $fe-field-padding;
+  border: $fe-field-border;
+  color: $fe-field-color;
+  background-color: $fe-field-color-bg;
+  //width: 100%;
+
+  &:focus {
+    @if $g-use-compass == true {
+      @include box-shadow(0px 0px 3px rgba($color-primary, 0.7), inset 0px 0px 8px rgba($color-primary, 0.1));
+    }
+    border: $fe-field-border-a;
+    outline: none;
+  }
+}
+
+@mixin fe-button {
+  padding: $fe-button-padding;
+  border: $fe-button-border;
+  color: $fe-button-color;
+  background-color: $fe-button-color-bg;
+
+  &:focus {
+    border: $fe-button-border-a;
+    outline: none;
+  }
+}
+
+@mixin fe-label {
+  @if $fe-label-orientation == top {
+    display: block;
+  } @else {
+    display: inline-block;
+    float: left;
+  }
+}
+
+input,
+select,
+textarea {
+  @include fe-field;
+}
+
+label {
+  @include fe-label;
+}
+
+input[type=button],
+input[type=submit],
+button {
+  @include fe-button;
+}
+
+input[type=file] {
+  border: 0px;
+  background-color: $fe-file-color-bg;
+  padding: $fe-file-padding;
+}

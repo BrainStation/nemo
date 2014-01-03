@@ -1,0 +1,34 @@
+// ------ CONFIG
+$g-use-compass: false !default;
+
+// ---- colors
+$color-primary: #50b7ce !default;
+
+// ------ FORM Elements
+$fe-label-orientation: top !default;
+
+// ---- paddings
+$fe-padding: 5px !default;
+$fe-field-padding: $fe-padding !default;
+$fe-button-padding: $fe-padding * 2 !default;
+$fe-file-padding: $fe-padding * 2 !default;
+
+// ---- colors
+$fe-color: #333 !default;
+$fe-field-color: $fe-color !default;
+$fe-button-color: #fff !default;
+$fe-field-border-color: #cecece;
+
+$fe-color-bg: #fff !default;
+$fe-field-color-bg: $fe-color-bg !default;
+$fe-button-color-bg: $color-primary !default;
+$fe-file-color-bg: lighten($fe-field-border-color, 15%) !default;
+
+// ---- borders
+$fe-border: 1px solid $fe-field-border-color !default;
+$fe-field-border: $fe-border !default;
+$fe-button-border: 0px !default;
+
+$fe-border-a: 1px solid $color-primary !default;
+$fe-field-border-a: $fe-border-a !default;
+$fe-button-border-a: $fe-border-a !default;
