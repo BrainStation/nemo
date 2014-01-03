@@ -1,7 +1,11 @@
-// NOTICE: import this file into your main app.scss - @import "PROJECT_ROOT/bower_components/nemo/scss/nemo";
+// NOTICE:
+// 1. copy this file into your local scss folder and import it into you main app.scss -> @import "nemo";
+// 2. comment in and modify the import statement at the bottom of this file to match your current structure @import "PROJECT_ROOT/bower_components/nemo/scss/bootstrap";
 
 // ------ CONFIG
+// if you want to use compass functionality you have to comment in these two lines
 //$g-use-compass: false;
+//@import "compass/css3/box-shadow";
 //
 // ---- colors
 //$color-primary: #50b7ce;
@@ -36,4 +40,4 @@
 //$fe-button-border-a: $fe-border-a;
 
 // ---- do not remove!
-@import "bootstrap";
+//@import "bower_components/nemo/scss/bootstrap";
