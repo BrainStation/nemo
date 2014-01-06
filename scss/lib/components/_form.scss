@@ -1,9 +1,9 @@
 @mixin fe-field {
-  padding: $fe-field-padding;
+  @include _rem($fe-field-text-size);
+  background-color: $fe-field-color-bg;
   border: $fe-field-border;
   color: $fe-field-color;
-  background-color: $fe-field-color-bg;
-  //width: 100%;
+  padding: $fe-field-padding;
 
   &:focus {
     @if $g-use-compass == true {
@@ -15,10 +15,11 @@
 }
 
 @mixin fe-button {
-  padding: $fe-button-padding;
+  @include _rem($fe-button-text-size);
+  background-color: $fe-button-color-bg;
   border: $fe-button-border;
   color: $fe-button-color;
-  background-color: $fe-button-color-bg;
+  padding: $fe-button-padding;
 
   &:focus {
     border: $fe-button-border-a;
@@ -27,12 +28,41 @@
 }
 
 @mixin fe-label {
+  @include _rem($fe-label-text-size);
+  //line-height: $fe-label-text-size + ($fe-field-padding * 2);
+
   @if $fe-label-orientation == top {
     display: block;
   } @else {
     display: inline-block;
-    float: left;
+    width: $fe-label-width;
   }
+
+  &.va-top {
+    vertical-align: top;
+  }
+}
+
+@mixin fe-placeholder {
+  &.placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder { @content; }  // Firefox 18-
+  &::-moz-placeholder { @content; }  // Firefox 19+
+  &:-ms-input-placeholder { @content; }
+}
+
+input {
+  @include fe-placeholder {
+    color: $fe-placeholder-color;
+  }
+}
+
+input,
+select,
+textarea,
+button,
+label {
+  margin: $fe-margin;
 }
 
 input,
@@ -41,8 +71,26 @@ textarea {
   @include fe-field;
 }
 
+input[type=text],
+input[type=date],
+select {
+  @if $fe-field-width != auto and $fe-field-width != none {
+    width: $fe-field-width;
+  }
+  @if $fe-field-min-width != auto and $fe-field-min-width != none {
+    min-width: $fe-field-min-width;
+  }
+  @if $fe-field-max-width != auto and $fe-field-max-width != none {
+    max-width: $fe-field-max-width;
+  }
+}
+
 label {
-  @include fe-label;
+  @if $fe-placeholder-only == true {
+    display: none;
+  } @else {
+    @include fe-label;
+  }
 }
 
 input[type=button],
@@ -52,7 +100,7 @@ button {
 }
 
 input[type=file] {
-  border: 0px;
   background-color: $fe-file-color-bg;
+  border: 0px;
   padding: $fe-file-padding;
 }

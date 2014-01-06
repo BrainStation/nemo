@@ -1,0 +1,43 @@
+// NOTICE:
+// 1. copy this file into your local scss folder within a lib folder and import it into you main app.scss -> @import "lib/nemo";
+// 2. comment in and modify the import statement at the bottom of this file to match your current structure @import "PROJECT_ROOT/bower_components/nemo/scss/bootstrap";
+
+// ------ CONFIG
+// if you want to use compass functionality you have to comment in these two lines
+//$g-use-compass: false;
+//@import "compass/css3/box-shadow";
+//
+// ---- colors
+//$color-primary: #50b7ce;
+//
+// ------ FORM Elements
+//$fe-label-orientation: top;
+//
+// ---- paddings
+//$fe-padding: 5px;
+//$fe-field-padding: $fe-padding;
+//$fe-button-padding: $fe-padding * 2;
+//$fe-file-padding: $fe-padding * 2;
+//
+// ---- colors
+//$fe-color: #333;
+//$fe-field-color: $fe-color;
+//$fe-button-color: #fff;
+//$fe-field-border-color: #cecece;
+//
+//$fe-color-bg: #fff;
+//$fe-field-color-bg: $fe-color-bg;
+//$fe-button-color-bg: $color-primary;
+//$fe-file-color-bg: lighten($fe-field-border-color, 15%);
+//
+// ---- borders
+//$fe-border: 1px solid $fe-field-border-color;
+//$fe-field-border: $fe-border;
+//$fe-button-border: 0px;
+//
+//$fe-border-a: 1px solid $color-primary;
+//$fe-field-border-a: $fe-border-a;
+//$fe-button-border-a: $fe-border-a;
+
+// ---- do not remove!
+//@import "bower_components/nemo/scss/bootstrap";

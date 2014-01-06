@@ -1,11 +1,29 @@
 // ------ CONFIG
 $g-use-compass: false !default;
+$em-base: 16px !default;
 
 // ---- colors
 $color-primary: #50b7ce !default;
 
 // ------ FORM Elements
-$fe-label-orientation: top !default;
+$fe-label-orientation: left !default;
+
+// ---- placeholder
+$fe-placeholder-only: false !default;
+$fe-placeholder-color: #aaa !default;
+
+// ---- sizes
+$fe-label-text-size: $em-base !default;
+$fe-field-text-size: $em-base * 0.8 !default;
+$fe-button-text-size: $em-base !default;
+$fe-label-width: 200px !default;
+
+$fe-field-min-width: 300px;
+$fe-field-width: 300px;
+$fe-field-max-width: none;
+
+// ---- paddings
+$fe-margin: 0 0 10px 0 !default;
 
 // ---- paddings
 $fe-padding: 5px !default;

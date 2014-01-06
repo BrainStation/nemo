@@ -1,0 +1,10 @@
+// Creating rems and pixels
+@function remCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1rem;
+}
+
+// provide fallback font-size to support older browsers
+@mixin _rem($pxWidth) {
+  font-size: $pxWidth;
+  font-size: remCalc($pxWidth);
+}
